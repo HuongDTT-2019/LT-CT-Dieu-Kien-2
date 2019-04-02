@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai6</title>
+</head>
+<body>
+<p>Bài 6: Giải phương trình bậc 1 ax+b=0</p>
+    <label>
+        Nhap so a:
+    </label>
+    <input id="soa" type="text" >
+    <label>
+        nhap so b:
+    </label>
+    <input type="text" id="sob">
+    <input type="submit" value="Giai pt" onclick="giaiPT();">
+<div id="result"></div>
+<script>
+    function giaiPT() {
+        let A=parseInt(document.getElementById('soa').value);
+        let B=parseInt(document.getElementById('sob').value);
+        if (A==0){
+            if(B==0){
+                document.getElementById('result').innerHTML='Phuong trinh co vo so nghiem';
+            }else
+                document.getElementById('result').innerHTML='Phuong trinh vo  nghiem';
+        }
+        else{
+            let result=-B/A;
+            document.getElementById('result').innerHTML='Phuong trinh co nghiem la '+result;
+        }
+
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai9</title>
+</head>
+<body>
+<p>Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác.</p>
+<label>
+    Nhap so a:
+</label>
+<input id="soa" type="text" >
+<label>
+    nhap so b:
+</label>
+<input type="text" id="sob">
+<label>
+    nhap so c:
+</label>
+<input type="text" id="soc">
+<input type="submit" value="checkDK" onclick="checkDK();">
+<div id="result"></div>
+<script>
+    function checkDK(){
+        let A=parseFloat(document.getElementById('soa').value);
+        let B=parseFloat(document.getElementById('sob').value);
+        let C=parseFloat(document.getElementById('soc').value);
+        let check1=(A>0&&B>0&&C>0), check2=(A+B>C),check3=(B+C>A),check4=(A+C>B);
+        if(check1){
+            if(check2&&check3&&check4){
+                document.getElementById('result').innerHTML="ba so "+A+', '+B+', '+C+' la canh cua tam giac';
+            }
+            else {
+                document.getElementById('result').innerHTML="ba so "+A+', '+B+', '+C+' khong la canh cua tam giac';
+            }
+        }else {
+            alert("hay nhap a b c lon hon 0");
+        }
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai10</title>
+</head>
+<body>
+<p>Bài 10: Viết chương trình tính giá điện.</p>
+<label>
+    nhap so dien tieu thu:
+</label>
+<input type="text" id="sodien">
+<input type="submit" value="checkDK" onclick="tinhGD();">
+<div id="result">VND</div>
+<script>
+    let result;
+    function tinhGD() {
+        let A=parseInt(document.getElementById('sodien').value);
+        if(A<=50){
+         result=A*1000;
+         document.getElementById('result').innerHTML='Tien dien la: '+A+'x1000= '+result;
+        }else if(A>50&&A<=100){
+            result=(50*1000)+(A-50)*1500;
+            document.getElementById('result').innerHTML='Tien dien la: '+'50x1000+'+(A-50)+'x1500= '+result;
+        }else{
+            result=(50*1000)+(50*1500)+(A-100)*1800;
+            document.getElementById('result').innerHTML='Tien dien la: '+'50x1000+50x1500+'+(A-100)+'x1800='+result;
+        }
+    }
+</script>
+</body>
+</html>

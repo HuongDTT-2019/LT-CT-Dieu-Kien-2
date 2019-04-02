@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai1</title>
+</head>
+<body>
+<p>Bài 1: Chuyển từ độ C sang độ F.</p>
+<label>
+    Do C:
+</label>
+<input id="doC" type="text" placeholder="nhap vao do C">
+<label>
+    Do F:
+</label>
+<input type="text" id="doF">
+<input type="submit" value="Chuyen doi" onclick="chuyenDoi();">
+<script>
+    function chuyenDoi() {
+        let C=parseInt(document.getElementById('doC').value);
+        let F=(9*C)/5+32;
+        document.getElementById('doF').value =F;
+    }
+</script>
+</body>
+</html>

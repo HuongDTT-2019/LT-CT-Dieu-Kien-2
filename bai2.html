@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai2</title>
+</head>
+<body>
+<p>Bài 2: Chuyển từ mét sang feet</p>
+<label>
+    Met:
+</label>
+<input id="met" type="text" placeholder="nhap vao met">
+<label>
+    Feet:
+</label>
+<input type="text" id="feet">
+<input type="submit" value="Chuyen doi" onclick="chuyenDoi();">
+<script>
+    function chuyenDoi() {
+        const I=3.2808;
+        let M=parseInt(document.getElementById('met').value);
+        let F=M*I;
+        document.getElementById('feet').value =F;
+    }
+</script>
+</body>
+</html>

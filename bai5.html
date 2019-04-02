@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bai5</title>
+</head>
+<body>
+<p>Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.</p>
+<label>
+    Nhap canh a:
+</label>
+<input id="a" type="text" placeholder="don vi met">
+<label>
+    nhap canh b:
+</label>
+<input type="text" id="b" placeholder="don vi met">
+<input type="submit" value="Tinh dien tich" onclick="tinhDT();">
+<div id="result"></div>
+<script>
+    function tinhDT() {
+        let A=parseInt(document.getElementById('a').value);
+        let B=parseInt(document.getElementById('b').value);
+        let S=(A*B)/2;
+        document.getElementById('result').innerHTML="dien tich hinh tam giac vuong la : "+S;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bai8</title>
+</head>
+<body>
+<p>Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.</p>
+<label>
+    nhap so:
+</label>
+<input type="text" id="so">
+<input type="submit" value="checkAge" onclick="checkAge();">
+<div id="result"></div>
+<script>
+    function checkAge(){
+        let A=parseInt(document.getElementById('so').value);
+        let check=(A<120&&A>0);
+        if(check){
+            alert(A+' la tuoi cua 1 ng');
+        }
+        else{
+            alert(A+ ' khong la tuoi');
+        }
+    }
+</script>
+</body>
+</html>

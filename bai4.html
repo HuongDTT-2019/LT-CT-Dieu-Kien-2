@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai4</title>
+</head>
+<body>
+<p>Bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.</p>
+<label>
+    Nhap chieu dai:
+</label>
+<input id="dai" type="text" placeholder="don vi met">
+<label>
+   nhap chieu rong:
+</label>
+<input type="text" id="rong" placeholder="don vi met">
+<input type="submit" value="Tinh dien tich" onclick="tinhDT();">
+<div id="result"></div>
+<script>
+    function tinhDT() {
+        let D=parseInt(document.getElementById('dai').value);
+        let R=parseInt(document.getElementById('rong').value);
+        let S=D*R;
+        document.getElementById('result').innerHTML="dien tich hinh chu nhat la: "+S;
+    }
+</script>
+</body>
+</html>
